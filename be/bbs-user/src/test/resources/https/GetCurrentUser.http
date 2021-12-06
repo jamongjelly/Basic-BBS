@@ -1,0 +1,3 @@
+### Get CurrentUser
+GET http://localhost:8080/auth/currentUser
+Authorization: Bearer {{auth_token}}

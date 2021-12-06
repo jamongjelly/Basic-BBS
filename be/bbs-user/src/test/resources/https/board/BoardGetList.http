@@ -1,0 +1,3 @@
+### Get Boards
+GET http://localhost:8080/boards
+Authorization: Bearer {{auth_token}}

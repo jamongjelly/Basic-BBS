@@ -1,0 +1,9 @@
+### Modify Board
+PUT http://localhost:8080/boards/3
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "name": "테스트 게시판",
+  "sort": 1000
+}

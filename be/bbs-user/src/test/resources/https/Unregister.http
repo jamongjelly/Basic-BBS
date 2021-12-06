@@ -1,0 +1,27 @@
+POST http://localhost:8080/auth/login
+content-Type: application/json
+
+{
+  "email": "user2@gmail.com",
+  "password": "user2"
+}
+
+> {%
+client.global.set("auth_token", response.body.accessToken);
+client.test("test", function() {
+   client.log(client.global.get("auth_token"));
+   client.assert(response.status === 200, "OK");
+});
+%}
+
+###
+PATCH http://localhost:8080/auth/unregister
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "password": "user2"
+}
+###
+DELETE http://localhost:8080/users/33
+Authorization: Bearer {{auth_token}}

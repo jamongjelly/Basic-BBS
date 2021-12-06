@@ -1,0 +1,3 @@
+### Read Replies By PostID
+DELETE http://localhost:8080/replies/2
+Authorization: Bearer {{auth_token}}

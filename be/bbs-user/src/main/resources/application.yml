@@ -1,0 +1,90 @@
+spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/p_bbs?useSSL=false&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+#    username: DB 아이디
+#    password: DB 비밀번호
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#        format_sql: true
+#    hibernate:
+#      ddl-auto: update
+
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 100KB
+      location: D:/Upload/Portfolio/productive-bbs/
+      max-file-size: 10MB
+      max-request-size: 21MB
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            clientId:
+#            clientSecret:
+#            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+#            scope:
+#              - email
+#              - profile
+#          facebook:
+#            clientId:
+#            clientSecret:
+#            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+#            scope:
+#              - public_profile
+#              - email
+#          github:
+#            clientId:
+#            clientSecret:
+#            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+#            scope:
+#              - user:email
+#              - read:user
+#          naver:
+#            clientId:
+#            clientSecret:
+#            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+#            authorizationGrantType: authorization_code
+#            scope:
+#              - email
+#              - profile_image
+#          kakao:
+#            clientId:
+#            clientSecret:
+#            redirectUri: "{baseUrl}/oauth2/callback/{registrationId}"
+#            clientAuthenticationMethod: post
+#            authorizationGrantType: authorization_code
+#            scope:
+#              - profile
+#              - account_email
+#        provider:
+#          facebook:
+#            authorizationUri: "https://www.facebook.com/v3.0/dialog/oauth"
+#            tokenUri: "https://graph.facebook.com/v3.0/oauth/access_token"
+#            userInfoUri: "https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)"
+#          naver:
+#            authorizationUri: "https://nid.naver.com/oauth2.0/authorize"
+#            tokenUri: "https://nid.naver.com/oauth2.0/token"
+#            userInfoUri: "https://openapi.naver.com/v1/nid/me"
+#            userNameAttribute: response
+#          kakao:
+#            authorizationUri: "https://kauth.kakao.com/oauth/authorize"
+#            tokenUri: "https://kauth.kakao.com/oauth/token"
+#            userInfoUri: "https://kapi.kakao.com/v2/user/me"
+#            userNameAttribute: kakao_account
+
+app:
+#  jwt:
+#    secretKey: 시크릿키
+#    expirationInMs: 토큰 만료 시간
+#  resources:
+#    location: 파일 저장 경로
+#    uriPath: /resources
+  oauth2:
+    authorizedRedirectUris:
+      http://localhost:3000/oauth2/redirect, myandroidapp://oauth2/redirect, myiosapp://oauth2/redirect

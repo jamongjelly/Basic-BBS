@@ -1,0 +1,12 @@
+### Write new Post
+POST http://localhost:8080/posts
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "title": "디아블로",
+  "writer": "테스터",
+  "content": "디아블로",
+  "showReply": true,
+  "boardId": 4
+}

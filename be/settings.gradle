@@ -1,0 +1,4 @@
+rootProject.name = 'be'
+include 'bbs-core'
+include 'bbs-user'
+

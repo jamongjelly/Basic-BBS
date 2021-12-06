@@ -1,0 +1,9 @@
+### Add new Todo
+POST http://localhost:8080/todos
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "done": false,
+  "text": "테스트 할 일 1"
+}

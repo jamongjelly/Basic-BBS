@@ -1,0 +1,15 @@
+POST http://localhost:8080/auth/login
+content-Type: application/json
+
+{
+  "email": "user@gmail.com",
+  "password": "user"
+}
+
+> {%
+client.global.set("auth_token", response.body.accessToken);
+client.test("test", function() {
+   client.log(client.global.get("auth_token"));
+   client.assert(response.status === 200, "OK");
+});
+%}

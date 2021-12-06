@@ -1,0 +1,11 @@
+### Write new Post
+PUT http://localhost:8080/posts/7
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "title": "(수정) 테스트 글 제목",
+  "content": "(수정) 테스트 글 내용",
+  "showReply": false,
+  "boardId": 5
+}

@@ -1,0 +1,9 @@
+## Add new Subject
+POST http://localhost:8080/subjects
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "name": "AOS",
+  "boardId": 5
+}

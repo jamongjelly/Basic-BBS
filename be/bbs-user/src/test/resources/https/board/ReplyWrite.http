@@ -1,0 +1,10 @@
+### Write new Reply
+POST http://localhost:8080/replies
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "writer": "테스트 댓글 작성자",
+  "content": "테스트 댓글",
+  "postId": 6
+}

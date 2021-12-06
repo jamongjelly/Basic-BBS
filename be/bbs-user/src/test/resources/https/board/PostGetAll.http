@@ -1,0 +1,3 @@
+### Get all Posts
+GET http://localhost:8080/posts
+Authorization: Bearer {{auth_token}}

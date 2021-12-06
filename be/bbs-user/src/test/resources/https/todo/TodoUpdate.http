@@ -1,0 +1,9 @@
+### Update Todo
+PUT http://localhost:8080/todos/1
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "done": true,
+  "text": "(수정) 테스트 할 일 1"
+}

@@ -1,0 +1,8 @@
+### Read Replies By PostID
+PUT http://localhost:8080/replies/3
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "content": "(수정) 테스트 댓글"
+}

@@ -1,0 +1,10 @@
+### Add New Board
+POST http://localhost:8080/boards
+Authorization: Bearer {{auth_token}}
+content-Type: application/json
+
+{
+  "name": "드라마",
+  "path": "drama",
+  "sort": 999
+}
